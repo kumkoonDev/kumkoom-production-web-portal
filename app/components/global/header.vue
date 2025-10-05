@@ -45,7 +45,7 @@
       <ul class="flex flex-row gap-4 w-xl text-gray-700 font-medium justify-center">
         <li><NuxtLink to="/" class="hover:text-blue-600">หน้าแรก</NuxtLink></li>
         <li>
-          <NuxtLink to="/services" class="hover:text-blue-600">บริการ</NuxtLink>
+          <NuxtLink to="/service" class="hover:text-blue-600">บริการ</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/portfolio" class="hover:text-blue-600">ผลงาน</NuxtLink>
@@ -120,7 +120,7 @@
                 <NuxtLink to="/" @click="isOpen = false">หน้าแรก</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services" @click="isOpen = false"
+                <NuxtLink to="/service" @click="isOpen = false"
                   >บริการ</NuxtLink
                 >
               </li>

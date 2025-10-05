@@ -19,7 +19,7 @@
     <div class="absolute inset-0 bg-black/60 z-0"></div>
 
     <!-- Hero Content -->
-    <div
+    <div data-aos="fade-up"
       class="relative z-10 flex items-center justify-start h-full px-8 md:ml-40 md:px-16"
     >
       <div class="text-white max-w-xl">
@@ -29,7 +29,7 @@
 
         <div class="flex space-x-4">
           <UButton
-            to="/services"
+            to="/service"
             class="text-white px-6 py-3 bg-[#f4a13f] rounded-lg shadow hover:bg-[#f4c48d] transition"
             >บริการของเรา</UButton
           >
@@ -142,6 +142,7 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO SECTION -->
   <section class="py-16 bg-white">
     <div data-aos="fade-up"  class="max-w-7xl mx-auto px-6 lg:px-8">
       <!-- Heading -->
@@ -170,6 +171,7 @@
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section class="py-16 bg-gray-50">
     <div data-aos="fade-up"  class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
