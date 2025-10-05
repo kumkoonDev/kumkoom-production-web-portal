@@ -44,7 +44,7 @@
   </section>
 
   <!-- BANNER SECTION -->
-  <section
+  <section data-aos="fade-up"
     class="bg-[#f4a13f] h-[160px] flex items-center justify-center text-center"
   >
     <p
@@ -193,7 +193,7 @@
               <div class="bg-[#f4a13f] p-3 rounded-lg text-white">📞</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Phone</h3>
-                <p class="text-gray-600">(+66) 085-555-8555</p>
+                <p class="text-gray-600">(+66) 092-957-3798</p>
               </div>
             </div>
 
@@ -201,7 +201,7 @@
               <div class="bg-[#f4a13f] p-3 rounded-lg text-white">✉️</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Email</h3>
-                <p class="text-gray-600">info@example.com</p>
+                <p class="text-gray-600">kumkoon.production@gmail.com</p>
               </div>
             </div>
           </div>
@@ -235,11 +235,23 @@ onMounted(() => {
   }
 });
 
-useSeoMeta({
+// useSeoMeta({
+//   title: 'ค้ำคูณโปรดักชั่น',
+//   description: 'รับผลิตสื่อโฆษณา',
+//   // ogDescription: 'This is my amazing site, let me tell you all about it.',
+//   // ogImage: 'https://example.com/image.png',
+// })
+
+
+
+useHead({
   title: 'ค้ำคูณโปรดักชั่น',
-  description: 'รับผลิตสื่อโฆษณา',
-  // ogDescription: 'This is my amazing site, let me tell you all about it.',
-  // ogImage: 'https://example.com/image.png',
+  meta: [
+    { name: 'description', content: 'รับผลิตสื่อโฆษณา' },
+    { property: 'og:title', content: 'ค้ำคูณโปรดักชั่น' },
+    { property: 'og:description', content: 'รับผลิตสื่อโฆษณา' },
+    // { property: 'og:image', content: '/about-cover.jpg' },
+  ]
 })
 </script>
 
