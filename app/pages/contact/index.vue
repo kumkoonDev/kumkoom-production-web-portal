@@ -9,7 +9,7 @@
         <div class="space-y-6 text-left flex justify-center">
           <div class="space-y-4 w-1/2 flex flex-col justify-center m-4">
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">📍</div>
+              <div class="bg-primary p-3 rounded-lg text-white">📍</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Location</h3>
                 <p class="text-gray-600">อำเภอ เขาวง จังหวัด กาฬสินธุ์ 46110</p>
@@ -17,7 +17,7 @@
             </div>
 
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">📞</div>
+              <div class="bg-primary p-3 rounded-lg text-white">📞</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Phone</h3>
                 <p class="text-gray-600">(+66) 092-957-3798</p>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">✉️</div>
+              <div class="bg-primary p-3 rounded-lg text-white">✉️</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Email</h3>
                 <p class="text-gray-600">kumkoon.production@gmail.com</p>

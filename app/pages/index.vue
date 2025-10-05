@@ -30,12 +30,12 @@
         <div class="flex space-x-4">
           <UButton
             to="/service"
-            class="text-white px-6 py-3 bg-[#f4a13f] rounded-lg shadow hover:bg-[#f4c48d] transition"
+            class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition"
             >บริการของเรา</UButton
           >
           <UButton
             to="/contact"
-            class="text-white px-6 py-3 bg-[#f4a13f] rounded-lg shadow hover:bg-[#f4c48d] transition"
+            class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition"
             >ติดต่อเรา</UButton
           >
         </div>
@@ -45,7 +45,7 @@
 
   <!-- BANNER SECTION -->
   <section data-aos="fade-up"
-    class="bg-[#f4a13f] h-[160px] flex items-center justify-center text-center"
+    class="bg-primary h-[160px] flex items-center justify-center text-center"
   >
     <p
       class="text-lg p-4 md:text-2xl font-light max-w-4xl leading-relaxed text-gray-200"
@@ -182,7 +182,7 @@
         <div class="space-y-6 text-left flex justify-center">
           <div class="space-y-4 w-1/2 flex flex-col justify-center m-4">
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">📍</div>
+              <div class="bg-primary p-3 rounded-lg text-white">📍</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Location</h3>
                 <p class="text-gray-600">อำเภอ เขาวง จังหวัด กาฬสินธุ์ 46110</p>
@@ -190,7 +190,7 @@
             </div>
 
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">📞</div>
+              <div class="bg-primary p-3 rounded-lg text-white">📞</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Phone</h3>
                 <p class="text-gray-600">(+66) 092-957-3798</p>
@@ -198,7 +198,7 @@
             </div>
 
             <div class="flex justify-start items-center space-x-4">
-              <div class="bg-[#f4a13f] p-3 rounded-lg text-white">✉️</div>
+              <div class="bg-primary p-3 rounded-lg text-white">✉️</div>
               <div>
                 <h3 class="font-semibold text-gray-900">Email</h3>
                 <p class="text-gray-600">kumkoon.production@gmail.com</p>
@@ -255,4 +255,5 @@ useHead({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
