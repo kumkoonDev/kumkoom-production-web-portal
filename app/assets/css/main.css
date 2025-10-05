@@ -2,5 +2,11 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: 'Prompt', sans-serif;
+  --font-sans: "Prompt", sans-serif;
+
+  --color-primary: #F4A13F;
+  --color-secondary: #F6B35A;
+  --color-dark: #D1842C;
+  --color-hover: #F2A846;
+  --color-contrast: #FFFFFF;
 }
