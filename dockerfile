@@ -6,7 +6,7 @@ WORKDIR /app
 
 # คัดลอกไฟล์ที่จำเป็นสำหรับการติดตั้ง Dependencies
 # ใช้ pnpm เป็นตัวอย่าง หากใช้ npm หรือ yarn ให้เปลี่ยนตามความเหมาะสม
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 # ติดตั้ง Dependencies ในโหมด production เพื่อลดขนาด image
 # หากมีการใช้ devDependencies ในระหว่าง build (ซึ่งไม่ควรมีสำหรับ production build ที่ดี) อาจต้องพิจารณา
