@@ -1,23 +1,17 @@
-version: '3.8'
+version: "3.8"
 services:
-  kumkoom-production-web-portal:
+  nuxt:
     build:
+      context: .
       dockerfile: Dockerfile
+    image: kumkoom-production-web-portal:latest
     container_name: kumkoom-production-web-portal
     ports:
       - "3000:3000"
-    restart: unless-stopped
     environment:
-
-      - HOST=0.0.0.0
-      - PORT=3000
-      # ตัวแปรสำหรับ Production เช่น API Base URL หรือ Keys
-      # ตัวอย่าง:
-      # - NUXT_PUBLIC_API_BASE_URL=https://api.yourdomain.com
-    
-    # เพิ่ม Healthcheck เพื่อตรวจสอบว่าแอปพลิเคชันพร้อมใช้งานหรือไม่
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      - NODE_ENV=production
+      # - NUXT_PUBLIC_API_URL=https://api.example.com
+    restart: unless-stopped
+    # production ไม่ควร mount source โดยตรง (เอาไว้ dev เท่านั้น)
+    # volumes:
+    #   - ./:/app:ro

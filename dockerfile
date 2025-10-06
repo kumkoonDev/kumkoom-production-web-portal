@@ -1,39 +1,41 @@
-# === Stage 1: Build ===
-FROM node:lts-alpine AS builder
-
-# ตั้งค่า Working Directory
+# ---------- BUILD STAGE ----------
+FROM node:18-alpine AS builder
 WORKDIR /app
 
-# คัดลอกไฟล์ที่จำเป็นสำหรับการติดตั้ง Dependencies
-# ใช้ pnpm เป็นตัวอย่าง หากใช้ npm หรือ yarn ให้เปลี่ยนตามความเหมาะสม
-COPY package.json ./
+# เพิ่มเครื่องมือจำเป็น (optional แต่ช่วยให้ build เสถียรบน alpine)
+RUN apk add --no-cache python3 make g++  
 
-# ติดตั้ง Dependencies ในโหมด production เพื่อลดขนาด image
-# หากมีการใช้ devDependencies ในระหว่าง build (ซึ่งไม่ควรมีสำหรับ production build ที่ดี) อาจต้องพิจารณา
-# แต่โดยทั่วไป Nuxt จะจัดการเรื่องนี้ในการ build
-RUN npm install -g pnpm && pnpm install --frozen-lockfile --prod
+# คัดลอกไฟล์ package แล้วติดตั้ง dependencies (clean install)
+COPY package*.json ./
+RUN npm ci
 
-# คัดลอกไฟล์โปรเจกต์ทั้งหมด
+# คัดลอกซอร์สโค้ดแล้ว build
 COPY . .
+# หากใช้ ENV เฉพาะตอน build -> กำหนดก่อน run build (optional)
+# ENV NUXT_PUBLIC_API_URL=https://api.example.com
+RUN npm run build
 
-# รัน Nuxt build
-# คำสั่งนี้จะสร้างไฟล์ Production Server ที่ .output
-RUN pnpm run build
-
-# === Stage 2: Production Runtime ===
-FROM node:lts-alpine AS runner
-
-# ตั้งค่า Working Directory สำหรับรันแอปพลิเคชัน
+# ---------- RUNTIME STAGE ----------
+FROM node:18-alpine AS runner
 WORKDIR /app
 
-# คัดลอกไฟล์ Production Output จาก Stage 1
-# Nuxt build output คือ .output/
-COPY --from=builder --chown=nuxtjs:nuxtjs /app/.output ./
+# ลดสิทธิ์: ใช้ user node (ไม่รันเป็น root)
+USER node
 
-
-# เปิดเผย Port ที่ Nuxt Server จะรัน
+ENV NODE_ENV=production
 EXPOSE 3000
 
-# คำสั่งเริ่มต้นการรัน Production Server
-# Nuxt/Nitro Production Server จะรันไฟล์ index.mjs
-CMD [ "node", "server/index.mjs" ]
+# คัดลอกเฉพาะสิ่งที่จำเป็นไปรัน
+# เอา package.json เพื่อทำ production install (โดย user node)
+COPY --chown=node:node package*.json ./
+
+# ติดตั้งเฉพาะ production deps
+RUN npm ci --only=production
+
+# คัดลอกผลลัพธ์การ build จาก builder
+COPY --chown=node:node --from=builder /app/.output ./.output
+# ถ้ามี public หรือ static folder ให้คัดลอกด้วย (ถ้าใช้)
+COPY --chown=node:node --from=builder /app/public ./public
+
+# คำสั่งเริ่มต้น - ใช้ Node รัน Nitro server
+CMD ["node", ".output/server/index.mjs"]
