@@ -1,38 +1,23 @@
-# =========================
-# 1️⃣ STAGE 1: Build stage
-# =========================
-FROM node:20-alpine AS builder
+# 1. ใช้ Node.js base image
+FROM node:20-alpine
 
-
+# 2. ตั้ง working directory
 WORKDIR /app
 
-# คัดลอกไฟล์ package.json และ lock file
+# 3. คัดลอกไฟล์ package.json และ lock file ก่อน (เพื่อ cache dependencies)
 COPY package*.json ./
 
-# ติดตั้ง dependencies
+# 4. ติดตั้ง dependencies
 RUN npm install
 
-# คัดลอกโค้ดทั้งหมดเข้ามา
+# 5. คัดลอกโค้ดทั้งหมดเข้า container
 COPY . .
 
-# Build โปรเจกต์ Nuxt (จะได้ไฟล์ใน .output/)
+# 6. Build แอป Nuxt
 RUN npm run build
 
-
-# =========================
-# 2️⃣ STAGE 2: Production stage
-# =========================
-FROM node:20-alpine AS runner
-
-# ตั้ง working directory
-WORKDIR /app
-
-# คัดลอกเฉพาะ output จาก build stage
-COPY --from=builder /app/.output ./.output
-
-# ตั้งค่าพอร์ตที่ Nuxt ใช้ (ค่าเริ่มต้นคือ 3000)
+# 7. กำหนด port ที่ Nuxt จะรัน (ค่า default คือ 3000)
 EXPOSE 3000
 
-
-# คำสั่งรันแอป (ใช้ nitro)
-CMD ["node", ".output/server/index.mjs"]
+# 8. คำสั่งเริ่มรัน container
+CMD ["npm", "run", "start"]
