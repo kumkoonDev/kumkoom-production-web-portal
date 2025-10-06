@@ -1,26 +1,43 @@
-# ---------- BUILD STAGE ----------
-FROM node:18-alpine AS builder
+# ✅ 1. ใช้ base image ที่เสถียรกว่า (Debian-based)
+FROM node:20-slim AS build
+
+# ✅ 2. ตั้ง working directory
 WORKDIR /app
 
-RUN apk add --no-cache python3 make g++  
+# ✅ 3. คัดลอกเฉพาะไฟล์ที่จำเป็นก่อน (เพื่อ cache layer)
 COPY package*.json ./
-RUN npm ci
 
+# ✅ 4. ติดตั้ง build tools และ dependencies ที่ Nuxt ต้องใช้
+RUN apt-get update && \
+    apt-get install -y python3 make g++ && \
+    npm ci && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# ✅ 5. คัดลอกโค้ดทั้งหมดเข้า container
 COPY . .
+
+# ✅ 6. ปิดการโหลด font จาก Google ตอน build (กันค้าง)
+ENV NUXT_FONT_FALLBACK=true
+ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+# ✅ 7. สร้าง production build
 RUN npm run build
 
-# ---------- RUNTIME STAGE ----------
-FROM node:18-alpine AS runner
+# ✅ 8. ใช้ image ขนาดเล็กสำหรับ runtime (multi-stage build)
+FROM node:20-slim AS runtime
 WORKDIR /app
 
-# ใช้ user ที่ปลอดภัย
-USER node
-ENV NODE_ENV=production
+# คัดลอกเฉพาะไฟล์ที่จำเป็นสำหรับรัน
+COPY --from=build /app/.output ./.output
+COPY --from=build /app/package*.json ./
+
+# ติดตั้งเฉพาะ production dependencies
+RUN npm ci --omit=dev && npm cache clean --force
+
+# เปิด port 3000 (default ของ Nuxt)
 EXPOSE 3000
 
-# คัดลอกเฉพาะไฟล์ผลลัพธ์ที่จำเป็น
-COPY --chown=node:node --from=builder /app/.output ./.output
-COPY --chown=node:node --from=builder /app/public ./public
-
-# ✅ ไม่ต้อง npm install ซ้ำ
+# ✅ 9. คำสั่งเริ่มรันแอป
 CMD ["node", ".output/server/index.mjs"]
