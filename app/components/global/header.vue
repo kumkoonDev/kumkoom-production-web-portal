@@ -22,7 +22,7 @@
     <div class="hidden md:flex items-center justify-start flex-1">
       <NuxtLink to="/">
         <img
-          src="https://placehold.co/180"
+          src="/imgs/LOGO_KKP.png"
           alt="Logo"
           class="h-[80px] w-auto"
         />
@@ -33,7 +33,7 @@
 <div class="absolute left-1/2 transform -translate-x-1/2 md:hidden">
   <NuxtLink to="/">
     <img
-      src="https://placehold.co/180"
+      src="/imgs/LOGO_KKP.png"
       alt="Logo"
       class="h-[80px] w-auto"
     />
