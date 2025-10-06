@@ -6,6 +6,7 @@ WORKDIR /app
 
 # 3. คัดลอกไฟล์ package.json และ lock file ก่อน (เพื่อ cache dependencies)
 COPY package*.json ./
+RUN npm ci
 
 # 4. ติดตั้ง dependencies
 RUN npm install

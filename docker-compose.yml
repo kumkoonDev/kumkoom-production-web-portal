@@ -1,21 +1,17 @@
-version: "3.9"
-
+version: "3.8"
 services:
-  kumkoom-production-web-app:
-    container_name: kumkoom-production-web-portal
+  nuxt:
     build:
       context: .
       dockerfile: Dockerfile
+    image: kumkoom-production-web-portal:latest
+    container_name: kumkoom-production-web-portal
     ports:
       - "3000:3000"
     environment:
-      NODE_ENV: production
-      NITRO_PORT: 3000
-      NITRO_HOST: 0.0.0.0
+      - NODE_ENV=production
+      # - NUXT_PUBLIC_API_URL=https://api.example.com
     restart: unless-stopped
-    networks:
-      - nuxt-network
-
-networks:
-  nuxt-network:
-    driver: bridge
+    # production ไม่ควร mount source โดยตรง (เอาไว้ dev เท่านั้น)
+    # volumes:
+    #   - ./:/app:ro
