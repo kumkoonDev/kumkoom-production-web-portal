@@ -20,6 +20,7 @@ COPY . .
 # ✅ 6. ปิดการโหลด font จาก Google ตอน build (กันค้าง)
 ENV NUXT_FONT_FALLBACK=true
 ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # ✅ 7. สร้าง production build
 RUN npm run build
