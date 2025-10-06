@@ -235,24 +235,24 @@ onMounted(() => {
   }
 });
 
-// useSeoMeta({
-//   title: 'ค้ำคูณโปรดักชั่น',
-//   description: 'รับผลิตสื่อโฆษณา',
-//   // ogDescription: 'This is my amazing site, let me tell you all about it.',
-//   // ogImage: 'https://example.com/image.png',
-// })
-
-
-
 useHead({
-  title: 'ค้ำคูณโปรดักชั่น',
+  title: 'คำคุณโปรดักชั่น | รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า',
   meta: [
-    { name: 'description', content: 'รับผลิตสื่อโฆษณา' },
-    { property: 'og:title', content: 'ค้ำคูณโปรดักชั่น' },
-    { property: 'og:description', content: 'รับผลิตสื่อโฆษณา' },
-    // { property: 'og:image', content: '/about-cover.jpg' },
-  ]
+    {
+      name: 'description',
+      content: 'คำคุณโปรดักชั่น รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก และสื่อ VDO ออนไลน์  ติดต่อเราได้เลย!'
+    },
+    {
+      name: 'keywords',
+      content: 'รับผลิตสื่อโฆษณา, วิดีโอโปรโมท, รีวิวสินค้า, ผลิตวิดีโอ, สื่อการสอน, โมชั่นกราฟฟิก, Kumkoon Production'
+    },
+    { property: 'og:title', content: 'คำคุณโปรดักชั่น | รับผลิตสื่อโฆษณา' },
+    { property: 'og:description', content: 'ทีมงานผู้เชี่ยวชาญด้านการผลิตสื่อวิดีโอและโฆษณาออนไลน์ ครบวงจร' },
+    { property: 'og:image', content: '/imgs/LOGO_KKP.png' },
+    { property: 'og:url', content: 'https://kumkoonproduction.com' },
+  ],
 })
+
 </script>
 
 <style scoped>

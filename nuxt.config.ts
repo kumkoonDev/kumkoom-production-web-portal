@@ -26,18 +26,19 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'ค้ำคูณโปรดักชั่น',
+      title: 'คำคุณโปรดักชั่น',
+      // titleTemplate: '%s | คำคุณโปรดักชั่น',
       meta: [
-        { name: 'description', content: 'รับผลิตสื่อโฆษณา' },
+        { name: 'description', content: 'รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า โมชั่นกราฟฟิก และสื่อการสอน ครบวงจร' },
         { property: 'og:title', content: 'ค้ำคูณโปรดักชั่น' },
-        { property: 'og:description', content: 'รับผลิตสื่อโฆษณา' },
+        { property: 'og:description', content: 'รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า โมชั่นกราฟฟิก และสื่อการสอน ครบวงจร' },
         { property: 'og:type', content: 'website' },
-        // { property: 'og:image', content: '/cover.jpg' },
+        { property: 'og:image', content: '/imgs/LOGO_KKP.png' },
       ],
       link: [
-        // { rel: 'icon', type: 'image/png', href: '/favicon.png' }
-      ]
-    }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
   },
 
 
