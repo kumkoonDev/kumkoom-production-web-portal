@@ -1,7 +1,12 @@
 <template>
-  <header class="w-full h-[90px] bg-white shadow flex items-center px-6 border-b-2 border-primary md:px-12">
+  <header
+    class="w-full h-[90px] bg-white shadow flex items-center px-6 border-b-2 border-primary md:px-12"
+  >
     <!-- Mobile: Hamburger Menu -->
-    <UButton @click="isOpen = true" class="md:hidden text-gray-700 bg-transparent p-2 mr-4 hover:bg-gray-400">
+    <UButton
+      @click="isOpen = true"
+      class="md:hidden text-gray-700 bg-transparent p-2 mr-4 hover:bg-gray-400"
+    >
       <!-- Icon Hamburger -->
       <svg
         class="w-7 h-7"
@@ -19,30 +24,28 @@
     </UButton>
 
     <!-- Left: Logo -->
-    <div class="hidden md:flex items-center justify-start flex-1">
+    <div class="hidden md:flex items-start justify-start flex-1">
       <NuxtLink to="/">
         <img
           src="/imgs/LOGO_KKP.png"
           alt="Logo"
-          class="h-[80px] w-auto"
+          class="h-[80px] w-auto object-contain"
         />
       </NuxtLink>
     </div>
 
-<!-- Logo (Mobile: Absolute Center) -->
-<div class="absolute left-1/2 transform -translate-x-1/2 md:hidden">
-  <NuxtLink to="/">
-    <img
-      src="/imgs/LOGO_KKP.png"
-      alt="Logo"
-      class="h-[80px] w-auto"
-    />
-  </NuxtLink>
-</div>
+    <!-- Logo (Mobile: Absolute Center) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 md:hidden">
+      <NuxtLink to="/">
+        <img src="/imgs/LOGO_KKP.png" alt="Logo" class="h-[80px] w-auto" />
+      </NuxtLink>
+    </div>
 
     <!-- Center: Navigation -->
-    <nav class="hidden md:flex flex-1 justify-center w-full">
-      <ul class="flex flex-row gap-4 w-xl text-gray-700 font-medium justify-center">
+    <nav class="hidden md:flex flex-1 justify-center w-lg">
+      <ul
+        class="flex flex-row gap-4 w-xl text-gray-700 font-medium justify-center"
+      >
         <li><NuxtLink to="/" class="hover:text-primary">หน้าแรก</NuxtLink></li>
         <li>
           <NuxtLink to="/service" class="hover:text-primary">บริการ</NuxtLink>
@@ -51,10 +54,14 @@
           <NuxtLink to="/portfolio" class="hover:text-primary">ผลงาน</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about" class="hover:text-primary">เกี่ยวกับเรา</NuxtLink>
+          <NuxtLink to="/about" class="hover:text-primary"
+            >เกี่ยวกับเรา</NuxtLink
+          >
         </li>
         <li>
-          <NuxtLink to="/contact" class="hover:text-primary">ติดต่อเรา</NuxtLink>
+          <NuxtLink to="/contact" class="hover:text-primary"
+            >ติดต่อเรา</NuxtLink
+          >
         </li>
       </ul>
     </nav>
