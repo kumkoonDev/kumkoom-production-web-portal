@@ -1,30 +1,26 @@
-FROM node:20-slim AS build
+FROM node:22-alpine AS build
 
 WORKDIR /app
+RUN corepack enable
 
-COPY package*.json ./
+COPY package.json pnpm-lock.yaml .npmrc ./
 
-RUN apt-get update && \
-    apt-get install -y python3 make g++ && \
-    npm ci && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN pnpm i
 
-COPY . .
+COPY . ./
 
 ENV NUXT_FONT_FALLBACK=true
 ENV NODE_ENV=production
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
-RUN npm run build
+RUN pnpm run build
 
-FROM node:20-slim AS runtime
+FROM node:22-alpine
 WORKDIR /app
 
 COPY --from=build /app/.output ./.output
 COPY --from=build /app/package*.json ./
 
-RUN npm ci --omit=dev && npm cache clean --force
 
 EXPOSE 3000
 
