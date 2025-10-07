@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'คำคุณโปรดักชั่น',
+      title: 'ค้ำคูณโปรดักชั่น',
       // titleTemplate: '%s | คำคุณโปรดักชั่น',
       meta: [
         { name: 'description', content: 'รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า โมชั่นกราฟฟิก และสื่อการสอน ครบวงจร' },
@@ -50,5 +50,17 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     "nuxt-aos",
-  ]
+    'nuxt-schema-org',
+    'nuxt-og-image',
+  ],
+
+   ogImage: {
+    // ✅ ตั้งค่าพื้นฐาน (optional)
+    defaults: {
+      component: 'OgImage',   // ชื่อ component ที่จะใช้ render OG image
+      background: '#111827',  // สีพื้นหลัง (tailwind gray-900)
+      color: '#f4a13f',       // สีข้อความหลัก
+    },
+  },
+
 })
