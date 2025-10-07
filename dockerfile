@@ -4,11 +4,12 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN apt-get update && \
-    apt-get install -y python3 make g++ && \
+RUN sed -i 's|deb.debian.org|mirror.google.com|g' /etc/apt/sources.list && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    python3 make g++ && \
     npm ci && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY . .
 
@@ -19,6 +20,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN npm run build
 
 FROM node:20-slim AS runtime
+
 WORKDIR /app
 
 COPY --from=build /app/.output ./.output
