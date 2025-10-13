@@ -1,28 +1,23 @@
 <template>
-  <!-- <Loading :show="loading" /> -->
 
-  <section class="relative w-full h-[300px] overflow-hidden md:h-[600px]">
+  <div class="relative w-full h-[300px] overflow-hidden md:h-[600px]">
     <!-- Background Video -->
-    <div
-      class="absolute top-0 left-0 w-full h-[300px] md:h-[600px] overflow-hidden"
-    >
-      <iframe
+
+    <div class="absolute top-0 left-0 w-full overflow-hidden">
+      <!-- <iframe
         class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 scale-[2] pointer-events-none"
         src="https://www.youtube.com/embed/2Gg6Seob5Mg?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=2Gg6Seob5Mg"
         title="YouTube video background"
         frameborder="0"
         allow="autoplay; fullscreen"
-      ></iframe>
+      ></iframe> -->
+      <BannerSlider class="absolute min-w-full min-h-full w-auto h-auto" />
     </div>
-
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/60 z-0"></div>
 
     <!-- Hero Content -->
-    <div
-      data-aos="fade-up"
-      class="relative z-10 flex items-center justify-start h-full px-8 md:ml-40 md:px-16"
-    >
+    <div data-aos="fade-up" class="relative z-10 flex items-center justify-start h-full px-8 md:ml-40 md:px-16">
       <div class="text-white max-w-xl">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">ยินดีต้อนรับ สู่</h1>
         <h1 class="text-4xl md:text-6xl font-bold mb-4">ค้ำคูณ โปรดักชั่น</h1>
@@ -31,52 +26,36 @@
         </p>
 
         <div class="flex space-x-4">
-          <UButton
-            to="/service"
-            class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition"
-            >บริการของเรา</UButton
-          >
-          <UButton
-            to="/contact"
-            class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition"
-            >ติดต่อเรา</UButton
-          >
+          <UButton to="/service" class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition">
+            บริการของเรา</UButton>
+          <UButton to="/contact" class="text-white px-6 py-3 bg-primary rounded-lg shadow bg-hover transition">ติดต่อเรา
+          </UButton>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- BANNER SECTION -->
-  <section
-    data-aos="fade-up"
-    class="bg-primary h-[160px] flex items-center justify-center text-center"
-  >
-    <p
-      class="text-lg p-4 md:text-2xl font-light max-w-4xl leading-relaxed text-gray-200"
-    >
+  <!-- BANNER Section -->
+  <div data-aos="fade-up" class="bg-primary h-[160px] flex items-center justify-center text-center">
+    <p class="text-lg p-4 md:text-2xl font-light max-w-4xl leading-relaxed text-gray-200">
       เราคือทีมงานคนรุ่นใหม่ที่เชื่อในพลังของความคิดสร้างสรรค์<br />
       พร้อมส่งต่อผลงานคุณภาพที่ตรงใจคุณ<br />
       ไม่ว่าจะเป็นภาพ วิดีโอ หรือสื่อออนไลน์ทุกรูปแบบ
     </p>
-  </section>
+  </div>
 
-  <!-- ABOUT SECTION -->
-  <section class="py-16 bg-gray-50">
+  <!-- ABOUT Section -->
+  <div class="py-16 bg-gray-50">
     <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img
-            src="https://placehold.co/955x682"
-            class="rounded-lg shadow-xl"
-          />
+          <img src="/imgs/about_1.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
         <div>
-          <h3
-            class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black"
-          >
+          <h3 class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black">
             เกี่ยวกับเรา
           </h3>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-black">
@@ -93,13 +72,11 @@
       </div>
     </div>
 
-    <div data-aos="fade-up" class="hidden mt-6 max-w-7xl  mx-auto px-6 lg:px-8  md:flex">
+    <div data-aos="fade-up" class="hidden mt-6 max-w-7xl mx-auto px-6 lg:px-8 md:flex">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Text -->
         <div>
-          <h2
-            class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black"
-          >
+          <h2 class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black">
             วิสัยทัศน์
           </h2>
           <p class="text-gray-700 leading-relaxed text-lg">
@@ -110,10 +87,7 @@
 
         <!-- Image -->
         <div>
-          <img
-            src="https://placehold.co/955x682"
-            class="rounded-lg shadow-xl"
-          />
+          <img src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
         </div>
       </div>
     </div>
@@ -122,17 +96,12 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img
-            src="https://placehold.co/955x682"
-            class="rounded-lg shadow-xl"
-          />
+          <img src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
         <div>
-          <h3
-            class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black"
-          >
+          <h3 class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black">
             วิสัยทัศน์
           </h3>
           <p class="text-gray-700 leading-relaxed text-lg">
@@ -143,35 +112,30 @@
       </div>
     </div>
 
-    <div data-aos="fade-up" class=" mt-6 max-w-7xl mx-auto px-6 lg:px-8">
+    <div data-aos="fade-up" class="mt-6 max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img
-            src="https://placehold.co/955x682"
-            class="rounded-lg shadow-xl"
-          />
+          <img src="/imgs/about_3.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
         <div>
-          <h3
-            class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black"
-          >
+          <h3 class="text-2xl text-primary font-semibold mb-3 uppercase tracking-widest text-black">
             จุดแข็งของเรา
           </h3>
           <p class="text-gray-700 leading-relaxed text-lg">
-            ทีมงานคนรุ่นใหม่ ไอเดียสดใหม่ ทันสมัย<br /> ครบทุกบริการในที่เดียว (One
-            Stop Service)<br />
+            ทีมงานคนรุ่นใหม่ ไอเดียสดใหม่ ทันสมัย<br />
+            ครบทุกบริการในที่เดียว (One Stop Service)<br />
             ใส่ใจทุกรายละเอียด ตั้งแต่ต้นจนจบ<br />
           </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- SERVICES SECTION -->
-<section class="py-16 bg-gray-50">
+  <!-- SERVICES Section -->
+  <div class="py-16 bg-gray-50">
     <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -183,16 +147,11 @@
         </p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-8"> <div
-          v-for="data in dataService"
-          :key="data.id"
+      <div class="flex flex-wrap justify-center gap-8">
+        <div v-for="data in dataService" :key="data.id"
           class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
-          style="max-width: 384px;" >
-          <img
-            :src="data.image"
-            alt="service"
-            class="w-full h-48 object-cover"
-          />
+          style="max-width: 384px">
+          <img :src="data.image" alt="service" class="w-full h-54 object-cover" />
 
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">
@@ -203,14 +162,13 @@
             </p>
           </div>
         </div>
-        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- PORTFOLIO SECTION -->
-  <section class="py-16 bg-white">
+  <!-- PORTFOLIO Section -->
+  <div class="py-16 bg-white">
     <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Heading -->
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
           ผลงานของเรา
@@ -223,21 +181,19 @@
 
       <!-- Works Grid -->
       <div class="grid gap-6 md:grid-cols-3">
-        <div
-          v-for="i in 6"
-          :key="i"
-          class="bg-gray-100 h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition"
-        >
-          <span class="text-gray-400 text-xl font-semibold">
-            ภาพผลงาน {{ i }}
+        <div v-for="work in dataPortfolio" :key="work.id" @click="openModal(work.videoId, work.mediaPlatforms)"
+          class="h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full"
+          :style="{ backgroundImage: `url(${work.thumbnail})` }">
+          <span class="text-white text-xl font-semibold  px-3 py-1 rounded hover:text-primary">
+            ▶ {{ work.title }}
           </span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CONTACT SECTION -->
-  <section class="py-16 bg-gray-50">
+  <!-- CONTACT Section -->
+  <div class="py-16 bg-gray-50">
     <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">ติดต่อเรา</h2>
@@ -273,59 +229,142 @@
         </div>
 
         <div>
-          <iframe
-            class="w-full h-80 rounded-lg shadow"
+          <iframe class="w-full h-80 rounded-lg shadow"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122295.30523585467!2d104.0952827!3d16.690474799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313d1b50916ef065%3A0x302b54113606ad0!2z4Lit4Liz4LmA4Lig4LitIOC5gOC4guC4suC4p-C4hyDguIHguLLguKzguKrguLTguJnguJjguLjguYw!5e0!3m2!1sth!2sth!4v1759397476924!5m2!1sth!2sth"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Modal -->
+  <VideoModal :show="showModal" :video-id="selectedVideoId" :mediaPlatformse="selectedVideoMediaPlatformse"
+    @close="closeModal" />
+
 </template>
 
-<script setup lang="ts">
-const loading = ref(true);
+<script setup>
+import { ref } from 'vue'
+import VideoModal from '~/components/VideoModal.vue'
+import BannerSlider from "~/components/BannerSlider.vue";
+
+const loading = ref(false)
 
 const dataService = ref([
   {
     id: 1,
     title: "ผลิตวิดีโอครบวงจร",
-    description:
-      "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
-    image: "https://placehold.co/400x300",
+    description: "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
+    image: "/imgs/service_1.png",
   },
   {
     id: 2,
     title: "ถ่ายภาพนิ่ง",
-    description:
-      "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
-    image: "https://placehold.co/400x300",
+    description: "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
+    image: "/imgs/service_2.png",
   },
   {
     id: 3,
     title: "ตัดต่อและ Post-Production",
-    description:
-      "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
-    image: "https://placehold.co/400x300",
+    description: "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
+    image: "/imgs/service_3.png",
   },
   {
     id: 4,
     title: "งานอีเวนท์และไลฟ์สด",
-    description:
-      "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
-    image: "https://placehold.co/400x300",
+    description: "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
+    image: "/imgs/service_4.png",
   },
   {
     id: 5,
     title: "PR & Communication",
-    description:
-      "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
-    image: "https://placehold.co/400x300",
+    description: "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
+    image: "/imgs/service_5.png",
   },
 ]);
 
+const dataPortfolio = ref([
+  {
+    id: 1,
+    title: "VTR Kalasin University 2026",
+    videoId: "k72XYUkt7gbJFWE1aio",
+    mediaPlatforms: 'dailymotion',
+    thumbnail: "/imgs/thumbnail_1.png"
+  },
+  {
+    id: 2,
+    title: "สำนักงานขนส่งจังหวัดกาฬสินธุ์",
+    videoId: "nzDFZ0s6Res",
+    mediaPlatforms: 'youtube',
+    thumbnail: "/imgs/thumbnail_2.png"
+  },
+  {
+    id: 3,
+    title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์",
+    videoId: "zsmlcknZxtk",
+    mediaPlatforms: 'youtube',
+    thumbnail: "/imgs/thumbnail_3.png"
+  },
+  {
+    id: 4,
+    title: "local data ownership",
+    videoId: "https://www.facebook.com/watch/?v=1247964613673214",
+    mediaPlatforms: 'facebook',
+    thumbnail: "/imgs/thumbnail_4.png"
+  },
+  {
+    id: 5,
+    title: "กองบุญเพื่อการให้ จังหวัดกาฬสินธุ์",
+    videoId: "https://www.facebook.com/watch/?v=9728740620582595",
+    mediaPlatforms: 'facebook',
+    thumbnail: "/imgs/thumbnail_5.png"
+  },
+  {
+    id: 6,
+    title: "HILUXREVO ชุมชนคนครีเอเตอร์ ",
+    videoId: "https://www.facebook.com/watch/?v=718350310229849",
+    mediaPlatforms: 'facebook',
+    thumbnail: "/imgs/thumbnail_6.png"
+  },
+  {
+    id: 7,
+    title: "อกหักทุกครั้ง อกพังทุกปี",
+    videoId: "eSUwNeuZSaM",
+    mediaPlatforms: 'youtube',
+    thumbnail: "/imgs/thumbnail_7.png"
+  },
+  {
+    id: 8,
+    title: "เปิดใจฮักกัน- กีตาร์จี",
+    videoId: "jJHwf0-hQfE",
+    mediaPlatforms: 'youtube',
+    thumbnail: "/imgs/thumbnail_8.png"
+  },
+  {
+    id: 9,
+    title: "รักแท้แพ้ผู้บ่าวเทสดี",
+    videoId: "JD9yd35BUu0",
+    mediaPlatforms: 'youtube',
+    thumbnail: "/imgs/thumbnail_9.png"
+  },
+]);
+
+
+const showModal = ref(false)
+const selectedVideoId = ref('')
+const selectedVideoMediaPlatformse = ref('youtube')
+
+function openModal(id, type) {
+  selectedVideoId.value = id
+  selectedVideoMediaPlatformse.value = type
+  showModal.value = true
+}
+
+function closeModal() {
+  showModal.value = false
+  selectedVideoId.value = ''
+  selectedVideoMediaPlatformse.value = 'youtube'
+}
 onMounted(() => {
   // ถ้า document โหลดเสร็จแล้วก่อนหน้านี้
   if (document.readyState === "complete") {
@@ -361,14 +400,37 @@ useHead({
   ],
 });
 
-
 defineOgImage({
-  component: 'OgImage',
+  component: "OgImage",
   props: {
-    title: 'ค้ำคุณโปรดักชั่น',
-    description: 'รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก ครบวงจร',
+    title: "ค้ำคุณโปรดักชั่น",
+    description:
+      "รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก ครบวงจร",
   },
-})
+});
 </script>
 
-<style scoped></style>
+<style>
+@keyframes slide {
+
+  0%,
+  33% {
+    transform: translateX(0%);
+  }
+
+  38%,
+  66% {
+    transform: translateX(-100%);
+  }
+
+  71%,
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.animate-slide {
+  width: 300%;
+  animation: slide 12s infinite;
+}
+</style>

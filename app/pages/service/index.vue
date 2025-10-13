@@ -1,6 +1,6 @@
 <template>
   <!-- SERVICES SECTION -->
-  <section class="py-16 bg-gray-50">
+  <div class="py-16 bg-gray-50">
     <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -13,17 +13,10 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-8">
-        <div
-          v-for="data in dataService"
-          :key="data.id"
-          class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.33rem)]"
-          style="max-width: 384px"
-        >
-          <img
-            :src="data.image"
-            alt="service"
-            class="w-full h-48 object-cover"
-          />
+        <div v-for="data in dataService" :key="data.id"
+          class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
+          style="max-width: 384px">
+          <img :src="data.image" alt="service" class="w-full h-54 object-cover" />
 
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">
@@ -36,7 +29,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
@@ -45,37 +38,32 @@ const dataService = ref([
   {
     id: 1,
     title: "ผลิตวิดีโอครบวงจร",
-    description:
-      "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
-    image: "https://placehold.co/400x300",
+    description: "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
+    image: "/imgs/service_1.png",
   },
   {
     id: 2,
     title: "ถ่ายภาพนิ่ง",
-    description:
-      "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
-    image: "https://placehold.co/400x300",
+    description: "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
+    image: "/imgs/service_2.png",
   },
   {
     id: 3,
     title: "ตัดต่อและ Post-Production",
-    description:
-      "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
-    image: "https://placehold.co/400x300",
+    description: "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
+    image: "/imgs/service_3.png",
   },
   {
     id: 4,
     title: "งานอีเวนท์และไลฟ์สด",
-    description:
-      "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
-    image: "https://placehold.co/400x300",
+    description: "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
+    image: "/imgs/service_4.png",
   },
   {
     id: 5,
     title: "PR & Communication",
-    description:
-      "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
-    image: "https://placehold.co/400x300",
+    description: "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
+    image: "/imgs/service_5.png",
   },
 ]);
 
