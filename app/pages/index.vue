@@ -244,8 +244,8 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="space-y-6 text-left flex justify-center">
-          <div class="space-y-4 w-1/2 flex flex-col justify-center m-4">
+        <div class="space-y-6 text-left flex justify-start md:justify-center">
+          <div class="space-y-4 w-2/3 flex flex-col justify-center m-4">
             <div class="flex justify-start items-center space-x-4">
               <div class="bg-primary p-3 rounded-lg text-white">📍</div>
               <div>
