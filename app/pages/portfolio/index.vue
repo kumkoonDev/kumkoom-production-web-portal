@@ -14,11 +14,15 @@
       <!-- Works Grid -->
       <div class="grid gap-6 md:grid-cols-3">
         <div v-for="work in dataPortfolio" :key="work.id" @click="openModal(work.videoId, work.mediaPlatforms)"
-          class="h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full"
+          class="relative h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full hover:scale-105"
           :style="{ backgroundImage: `url(${work.thumbnail})` }">
-          <span class="text-white text-xl font-semibold  px-3 py-1 rounded hover:text-primary">
-            ▶ {{ work.title }}
-          </span>
+          <div
+            class="absolute inset-0 bg-black bg-opacity-20 transition-opacity opacity-0 hover:opacity-60 flex items-center justify-center">
+            <span
+              class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors">
+              ▶ {{ work.title }}
+            </span>
+          </div>
         </div>
       </div>
     </div>
