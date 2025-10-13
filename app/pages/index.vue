@@ -404,6 +404,7 @@ useHead({
   ],
 });
 
+
 defineOgImage({
   component: "OgImage",
   props: {
