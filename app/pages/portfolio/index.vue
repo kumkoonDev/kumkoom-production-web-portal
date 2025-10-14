@@ -17,9 +17,8 @@
           class="relative h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full hover:scale-105"
           :style="{ backgroundImage: `url(${work.thumbnail})` }">
           <div
-            class="absolute inset-0 bg-black bg-opacity-20 transition-opacity opacity-0 hover:opacity-60 flex items-center justify-center">
-            <span
-              class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors">
+            class="absolute inset-0 bg-black bg-opacity-40 transition-opacity opacity-0 hover:opacity-80 flex items-center justify-center">
+            <span class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors ">
               ▶ {{ work.title }}
             </span>
           </div>
@@ -27,8 +26,6 @@
       </div>
     </div>
   </div>
-
-
   <!-- Modal -->
   <VideoModal :show="showModal" :video-id="selectedVideoId" :mediaPlatformse="selectedVideoMediaPlatformse"
     @close="closeModal" />

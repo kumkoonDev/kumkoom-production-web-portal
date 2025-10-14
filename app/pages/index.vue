@@ -1,5 +1,4 @@
 <template>
-
   <div class="relative w-full h-[300px] overflow-hidden md:h-[600px]">
     <!-- Background Video -->
 
@@ -50,7 +49,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img src="/imgs/about_1.png" class="rounded-lg shadow-xl" />
+          <img loading="lazy" src="/imgs/about_1.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
@@ -87,7 +86,7 @@
 
         <!-- Image -->
         <div>
-          <img src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
+          <img loading="lazy" src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
         </div>
       </div>
     </div>
@@ -96,7 +95,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
+          <img loading="lazy" src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
@@ -116,7 +115,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img src="/imgs/about_3.png" class="rounded-lg shadow-xl" />
+          <img loading="lazy" src="/imgs/about_3.png" class="rounded-lg shadow-xl" />
         </div>
 
         <!-- Text -->
@@ -151,7 +150,7 @@
         <div v-for="data in dataService" :key="data.id"
           class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
           style="max-width: 384px">
-          <img :src="data.image" alt="service" class="w-full h-54 object-cover" />
+          <img loading="lazy" :src="data.image" alt="service" class="w-full h-54 object-cover" />
 
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">
@@ -180,14 +179,14 @@
       </div>
 
       <!-- Works Grid -->
-            <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-3">
         <div v-for="work in dataPortfolio" :key="work.id" @click="openModal(work.videoId, work.mediaPlatforms)"
           class="relative h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full hover:scale-105"
           :style="{ backgroundImage: `url(${work.thumbnail})` }">
           <div
-            class="absolute inset-0 bg-black bg-opacity-20 transition-opacity opacity-0 hover:opacity-60 flex items-center justify-center">
+            class="absolute inset-0 bg-black bg-opacity-40 transition-opacity opacity-0 hover:opacity-80 flex items-center justify-center">
             <span
-              class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors">
+              class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors ">
               ▶ {{ work.title }}
             </span>
           </div>
@@ -244,15 +243,14 @@
   <!-- Modal -->
   <VideoModal :show="showModal" :video-id="selectedVideoId" :mediaPlatformse="selectedVideoMediaPlatformse"
     @close="closeModal" />
-
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import VideoModal from '~/components/VideoModal.vue'
+import { ref } from "vue";
+import VideoModal from "~/components/VideoModal.vue";
 import BannerSlider from "~/components/BannerSlider.vue";
 
-const loading = ref(false)
+const loading = ref(false);
 
 const dataService = ref([
   {
@@ -292,82 +290,81 @@ const dataPortfolio = ref([
     id: 1,
     title: "VTR Kalasin University 2026",
     videoId: "k72XYUkt7gbJFWE1aio",
-    mediaPlatforms: 'dailymotion',
-    thumbnail: "/imgs/thumbnail_1.png"
+    mediaPlatforms: "dailymotion",
+    thumbnail: "/imgs/thumbnail_1.png",
   },
   {
     id: 2,
     title: "สำนักงานขนส่งจังหวัดกาฬสินธุ์",
     videoId: "nzDFZ0s6Res",
-    mediaPlatforms: 'youtube',
-    thumbnail: "/imgs/thumbnail_2.png"
+    mediaPlatforms: "youtube",
+    thumbnail: "/imgs/thumbnail_2.png",
   },
   {
     id: 3,
     title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์",
     videoId: "zsmlcknZxtk",
-    mediaPlatforms: 'youtube',
-    thumbnail: "/imgs/thumbnail_3.png"
+    mediaPlatforms: "youtube",
+    thumbnail: "/imgs/thumbnail_3.png",
   },
   {
     id: 4,
     title: "Local Data Ownership",
     videoId: "https://www.facebook.com/watch/?v=1247964613673214",
-    mediaPlatforms: 'facebook',
-    thumbnail: "/imgs/thumbnail_4.png"
+    mediaPlatforms: "facebook",
+    thumbnail: "/imgs/thumbnail_4.png",
   },
   {
     id: 5,
     title: "กองบุญเพื่อการให้ จังหวัดกาฬสินธุ์",
     videoId: "https://www.facebook.com/watch/?v=9728740620582595",
-    mediaPlatforms: 'facebook',
-    thumbnail: "/imgs/thumbnail_5.png"
+    mediaPlatforms: "facebook",
+    thumbnail: "/imgs/thumbnail_5.png",
   },
   {
     id: 6,
     title: "HILUXREVO ชุมชนคนครีเอเตอร์ ",
     videoId: "https://www.facebook.com/watch/?v=718350310229849",
-    mediaPlatforms: 'facebook',
-    thumbnail: "/imgs/thumbnail_6.png"
+    mediaPlatforms: "facebook",
+    thumbnail: "/imgs/thumbnail_6.png",
   },
   {
     id: 7,
     title: "อกหักทุกครั้ง อกพังทุกปี",
     videoId: "eSUwNeuZSaM",
-    mediaPlatforms: 'youtube',
-    thumbnail: "/imgs/thumbnail_7.png"
+    mediaPlatforms: "youtube",
+    thumbnail: "/imgs/thumbnail_7.png",
   },
   {
     id: 8,
     title: "เปิดใจฮักกัน",
     videoId: "jJHwf0-hQfE",
-    mediaPlatforms: 'youtube',
-    thumbnail: "/imgs/thumbnail_8.png"
+    mediaPlatforms: "youtube",
+    thumbnail: "/imgs/thumbnail_8.png",
   },
   {
     id: 9,
     title: "รักแท้แพ้ผู้บ่าวเทสดี",
     videoId: "JD9yd35BUu0",
-    mediaPlatforms: 'youtube',
-    thumbnail: "/imgs/thumbnail_9.png"
+    mediaPlatforms: "youtube",
+    thumbnail: "/imgs/thumbnail_9.png",
   },
 ]);
 
-
-const showModal = ref(false)
-const selectedVideoId = ref('')
-const selectedVideoMediaPlatformse = ref('youtube')
+const showModal = ref(false);
+const selectedVideoId = ref("");
+const selectedVideoMediaPlatformse = ref("youtube");
 
 function openModal(id, type) {
-  selectedVideoId.value = id
-  selectedVideoMediaPlatformse.value = type
-  showModal.value = true
+  selectedVideoId.value = id;
+  selectedVideoMediaPlatformse.value = type;
+  showModal.value = true;
 }
 
 function closeModal() {
-  showModal.value = false
-  selectedVideoId.value = ''
-  selectedVideoMediaPlatformse.value = 'youtube'
+  showModal.value = false;
+  selectedVideoId.value = "";
+  selectedVideoMediaPlatformse.value = "youtube";
 }
 onMounted(() => {
   // ถ้า document โหลดเสร็จแล้วก่อนหน้านี้
@@ -399,11 +396,12 @@ useHead({
       property: "og:description",
       content: "ทีมงานผู้เชี่ยวชาญด้านการผลิตสื่อวิดีโอและโฆษณาออนไลน์ ครบวงจร",
     },
-    { property: "og:image", content: "/imgs/LOGO_KKP.png" },
+    { property: "og:image", content: "/imgs/OG_image.png" },
     { property: "og:url", content: "https://kumkoonproduction.com" },
+    { property: "lang", content: "thai" },
+    { property: "icon", content: "/favicon.ico" },
   ],
 });
-
 
 defineOgImage({
   component: "OgImage",
