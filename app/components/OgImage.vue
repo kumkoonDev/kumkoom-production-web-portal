@@ -1,5 +1,15 @@
 <template>
-  <div
+ 
+<div class="flex flex-col justify-center items-center w-full h-full bg-black">
+
+  <img
+      src="/imgs/OG_image.png"
+      alt="logo"
+      class="w-full h-full  mx-auto"
+    />
+</div>
+
+  <!-- <div
     class="flex flex-col justify-center items-center w-full h-full bg-[#111827] text-white text-center"
   >
     <img
@@ -9,7 +19,7 @@
     />
     <h1 class="text-7xl -top-8 font-bold text-[#f4a13f]">{{ title }}</h1>
     <p class="text-4xl -top-8 opacity-80">{{ description }}</p>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
