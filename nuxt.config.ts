@@ -38,7 +38,7 @@ export default defineNuxtConfig({
             "รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า โมชั่นกราฟฟิก และสื่อการสอน ครบวงจร",
         },
         { property: "og:type", content: "website" },
-        { property: "og:image", content: "/imgs/LOGO_KKP.png" },
+        { property: "og:image", content: "/imgs/OG_image.png" },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, {
@@ -64,7 +64,6 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "@nuxt/ui",
     "nuxt-aos",
-    "nuxt-schema-org",
     "nuxt-og-image",
   ],
 
