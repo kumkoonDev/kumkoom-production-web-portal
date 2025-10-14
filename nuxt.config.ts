@@ -40,7 +40,14 @@ export default defineNuxtConfig({
         { property: "og:type", content: "website" },
         { property: "og:image", content: "/imgs/LOGO_KKP.png" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, {
+          rel: 'icon', 
+          type: 'image/png', 
+          sizes: '144x144', 
+          href: '/favicon-144x144.png'
+        }
+      ],
     },
   },
 
@@ -72,11 +79,11 @@ export default defineNuxtConfig({
     fonts: [
       // ตัวอย่าง: ถ้าคุณใช้ฟอนต์ Sarabun
       {
-        name: 'SukhumvitSet', // ชื่อที่คุณจะใช้อ้างอิงใน OG component
-        path: '/fonts/SukhumvitSet-Medium.ttf', // เส้นทางไปยังไฟล์ฟอนต์จริง
+        name: "SukhumvitSet", // ชื่อที่คุณจะใช้อ้างอิงใน OG component
+        path: "/fonts/SukhumvitSet-Medium.ttf", // เส้นทางไปยังไฟล์ฟอนต์จริง
         weight: 400,
-        style: 'normal',
+        style: "normal",
       },
-    ]
+    ],
   },
 });
