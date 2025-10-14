@@ -68,7 +68,7 @@ const dataPortfolio = ref([
   },
   {
     id: 4,
-    title: "local data ownership",
+    title: "Local Data Ownership",
     videoId: "https://www.facebook.com/watch/?v=1247964613673214",
     mediaPlatforms: 'facebook',
     thumbnail: "/imgs/thumbnail_4.png"
@@ -96,7 +96,7 @@ const dataPortfolio = ref([
   },
   {
     id: 8,
-    title: "เปิดใจฮักกัน- กีตาร์จี",
+    title: "เปิดใจฮักกัน",
     videoId: "jJHwf0-hQfE",
     mediaPlatforms: 'youtube',
     thumbnail: "/imgs/thumbnail_8.png"
