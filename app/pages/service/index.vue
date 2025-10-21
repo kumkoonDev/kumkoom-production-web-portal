@@ -16,7 +16,7 @@
         <div v-for="data in dataService" :key="data.id"
           class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
           style="max-width: 384px">
-          <img loading="lazy" :src="data.image" alt="service" class="w-full h-54 object-cover" />
+          <NuxtImg :src="data.image" alt="service" class="w-full h-54 object-cover"loading="lazy" />
 
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">

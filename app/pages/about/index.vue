@@ -5,7 +5,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img loading="lazy" src="/imgs/about_1.png" class="rounded-lg shadow-xl" />
+          <NuxtImg src="/imgs/about_1.png" class="rounded-lg shadow-xl" loading="lazy" />
         </div>
 
         <!-- Text -->
@@ -42,7 +42,7 @@
 
         <!-- Image -->
         <div>
-          <img loading="lazy" src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
+          <NuxtImg src="/imgs/about_2.png" class="rounded-lg shadow-xl" loading="lazy" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img loading="lazy" src="/imgs/about_2.png" class="rounded-lg shadow-xl" />
+          <NuxtImg src="/imgs/about_2.png" class="rounded-lg shadow-xl" loading="lazy" />
         </div>
 
         <!-- Text -->
@@ -71,7 +71,7 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <div>
-          <img loading="lazy" src="/imgs/about_3.png" class="rounded-lg shadow-xl" />
+          <NuxtImg src="/imgs/about_3.png" class="rounded-lg shadow-xl" loading="lazy" />
         </div>
 
         <!-- Text -->
