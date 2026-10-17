@@ -13,10 +13,10 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-8">
-        <div v-for="data in dataService" :key="data.id"
+        <div v-for="data in serviceItems" :key="data.id"
           class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
           style="max-width: 384px">
-          <NuxtImg :src="data.image" alt="service" class="w-full h-54 object-cover"loading="lazy" />
+          <NuxtImg :src="data.image" alt="" class="w-full h-54 object-cover" loading="lazy" />
 
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">
@@ -32,41 +32,17 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { serviceItems } from "~/data/services";
 
-const dataService = ref([
-  {
-    id: 1,
-    title: "ผลิตวิดีโอครบวงจร",
-    description: "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
-    image: "/imgs/service_1.png",
-  },
-  {
-    id: 2,
-    title: "ถ่ายภาพนิ่ง",
-    description: "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
-    image: "/imgs/service_2.png",
-  },
-  {
-    id: 3,
-    title: "ตัดต่อและ Post-Production",
-    description: "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
-    image: "/imgs/service_3.png",
-  },
-  {
-    id: 4,
-    title: "งานอีเวนท์และไลฟ์สด",
-    description: "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
-    image: "/imgs/service_4.png",
-  },
-  {
-    id: 5,
-    title: "PR & Communication",
-    description: "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
-    image: "/imgs/service_5.png",
-  },
-]);
-
+useHead({
+  title: "บริการของเรา | ค้ำคูณโปรดักชั่น",
+  meta: [
+    {
+      name: "description",
+      content: "บริการผลิตวิดีโอ ถ่ายภาพนิ่ง ตัดต่อ Post-Production งานอีเวนท์ ไลฟ์สด และสื่อประชาสัมพันธ์ครบวงจร",
+    },
+  ],
+});
 </script>
 
-<style scoped></style>

@@ -1,55 +1,51 @@
 <template>
   <div
-  v-if="show"
-  class="fixed inset-0 z-50 flex items-center justify-center"
->
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/70 " @click="$emit('close')"></div>
+    v-if="show"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-label="เครื่องเล่นวิดีโอ"
+    @click.self="emitClose"
+  >
+    <div class="relative w-full max-w-5xl">
+      <button
+        type="button"
+        class="absolute -top-12 right-0 z-20 text-5xl font-bold text-white transition hover:text-red-400"
+        aria-label="ปิดหน้าต่างวิดีโอ"
+        @click="emitClose"
+      >
+        &times;
+      </button>
 
-  <!-- Video box -->
-  <div class="relative w-3/4 z-10">
-    <!-- ปุ่มปิด -->
-    <button
-      @click="$emit('close')"
-      class="absolute -top-15 right-0 text-white hover:text-red-400 text-7xl font-bold z-20"
-    >
-      &times;
-    </button>
-
-      <!-- Video iframe -->
-      <div class="aspect-video rounded-2xl overflow-hidden shadow-lg bg-black">
-        <!-- YouTube -->
+      <div class="aspect-video overflow-hidden rounded-2xl bg-black shadow-lg">
         <iframe
-          v-if="mediaPlatformse === 'youtube'"
-          class="w-full h-full"
+          v-if="platform === 'youtube'"
+          class="h-full w-full"
           :src="`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
+          title="YouTube video player"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
           allowfullscreen
-        ></iframe>
+        />
 
-        <!-- Facebook -->
         <iframe
-          v-else-if="mediaPlatformse === 'facebook'"
-          class="w-full h-full"
+          v-else-if="platform === 'facebook'"
+          class="h-full w-full"
           :src="`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoId)}&autoplay=0&show_text=0`"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          title="Facebook video player"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen"
           allowfullscreen
-        ></iframe>
+        />
 
-        <!-- Dailymotion -->
-        <iframe 
-          v-else-if="mediaPlatformse === 'dailymotion'"
-          class="w-full h-full z-0"
-          :src="`https://www.dailymotion.com/embed/video/${videoId}?autoplay=1`"
-          frameborder="0"
+        <iframe
+          v-else-if="platform === 'dailymotion'"
+          class="h-full w-full"
+          :src="`https://geo.dailymotion.com/player/x8lr5.html?video=${videoId}&amp;mute=true`"
+          title="Dailymotion video player"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        />
 
-        <!-- Fallback -->
-        <div v-else class="text-white flex items-center justify-center h-full">
+        <div v-else class="flex h-full items-center justify-center text-white">
           ไม่มีวิดีโอให้แสดง
         </div>
       </div>
@@ -57,10 +53,43 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  show: Boolean,
-  videoId: String,       // สำหรับ YouTube / Dailymotion
-  mediaPlatformse: String      // 'youtube', 'facebook', 'dailymotion'
-})
+<script setup lang="ts">
+import { onBeforeUnmount, onMounted, watch } from "vue";
+import type { MediaPlatform } from "~/types/media";
+
+const props = defineProps<{
+  show: boolean;
+  videoId: string;
+  platform: MediaPlatform;
+}>();
+
+const emit = defineEmits<{
+  close: [];
+}>();
+
+function emitClose() {
+  emit("close");
+}
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === "Escape" && props.show) emitClose();
+}
+
+watch(
+  () => props.show,
+  (isOpen) => {
+    if (import.meta.client) {
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    }
+  },
+  { immediate: true },
+);
+
+onMounted(() => window.addEventListener("keydown", onKeydown));
+onBeforeUnmount(() => {
+  if (import.meta.client) {
+    window.removeEventListener("keydown", onKeydown);
+    document.body.style.overflow = "";
+  }
+});
 </script>

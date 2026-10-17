@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: "Prompt", sans-serif;
+  --font-sans: "SukhumvitSet", sans-serif;
 
   --color-primary: #F4A13F;
   --color-secondary: #F6B35A;

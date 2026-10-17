@@ -39,8 +39,6 @@ export default defineNuxtConfig({
         },
         { property: "og:type", content: "website" },
         { property: "og:image", content: "/imgs/OG_image.png" },
-        { property: "lang", content: "thai" },
-        { property: "icon", content: "/favicon.ico" },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -50,8 +48,7 @@ export default defineNuxtConfig({
           sizes: "144x144",
           href: "/favicon-144x144.png",
         },
-        { rel: 'icon', type: 'image/png', href: '/favicon-144x144.png' },
-        { rel: 'apple-touch-icon', href: '/favicon-144x144.png' }
+        { rel: "apple-touch-icon", href: "/favicon-144x144.png" },
       ],
     },
   },

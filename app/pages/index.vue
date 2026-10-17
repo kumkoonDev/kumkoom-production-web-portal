@@ -19,7 +19,7 @@
     <div data-aos="fade-up" class="relative z-10 flex items-center justify-start h-full px-8 md:ml-40 md:px-16">
       <div class="text-white max-w-xl">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">ยินดีต้อนรับ สู่</h1>
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">ค้ำคูณ โปรดักชั่น</h1>
+        <p class="text-4xl md:text-6xl font-bold mb-4">ค้ำคูณ โปรดักชั่น</p>
         <p class="text-lg md:text-xl mb-6">
           เติมเต็มทุกไอเดีย สร้างสรรค์ทุกสื่ออย่างมืออาชีพ
         </p>
@@ -147,10 +147,10 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-8">
-        <div v-for="data in dataService" :key="data.id"
+        <div v-for="data in serviceItems" :key="data.id"
           class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col w-full sm:w-[calc(50%-1rem)] md:w-[calc(50%-1.33rem)]"
           style="max-width: 384px">
-          <NuxtImg :src="data.image" alt="service" class="w-full h-54 object-cover"loading="lazy" />
+          <NuxtImg :src="data.image" alt="" class="w-full h-54 object-cover" loading="lazy" />
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="mt-2 text-xl font-semibold text-gray-900">
               {{ data.title }}
@@ -165,34 +165,7 @@
   </div>
 
   <!-- PORTFOLIO Section -->
-  <div class="py-16 bg-white">
-    <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-          ผลงานของเรา
-        </h2>
-        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          ตัวอย่างผลงานที่เราได้ทำให้กับลูกค้าในหลายอุตสาหกรรม
-          เพื่อสร้างคุณค่าและความแตกต่างที่แท้จริง
-        </p>
-      </div>
-
-      <!-- Works Grid -->
-      <div class="grid gap-6 md:grid-cols-3">
-        <div v-for="work in dataPortfolio" :key="work.id" @click="openModal(work.videoId, work.mediaPlatforms)"
-          class="relative h-64 flex items-center justify-center rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-cover bg-center w-full hover:scale-105"
-          :style="{ backgroundImage: `url(${work.thumbnail})` }">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 transition-opacity opacity-0 hover:opacity-80 flex items-center justify-center">
-            <span
-              class="relative text-white text-xl font-semibold px-3 py-1 rounded hover:text-primary transition-colors ">
-              ▶ {{ work.title }}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <PortfolioGallery />
 
   <!-- CONTACT Section -->
   <div class="py-16 bg-gray-50">
@@ -238,201 +211,43 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal -->
-  <VideoModal :show="showModal" :video-id="selectedVideoId" :mediaPlatformse="selectedVideoMediaPlatformse"
-    @close="closeModal" />
 </template>
 
-<script setup>
-import { ref } from "vue";
-import VideoModal from "~/components/VideoModal.vue";
+<script setup lang="ts">
 import BannerSlider from "~/components/BannerSlider.vue";
-
-const loading = ref(false);
-
-const dataService = ref([
-  {
-    id: 1,
-    title: "ผลิตวิดีโอครบวงจร",
-    description: "หนังสั้น, โฆษณา, MV เพลง, สื่อประชาสัมพันธ์, สื่อสารองค์กร",
-    image: "/imgs/service_1.png",
-  },
-  {
-    id: 2,
-    title: "ถ่ายภาพนิ่ง",
-    description: "ภาพบุคคล, สินค้า, กิจกรรม, ภาพมุมสูงด้วยโดรน",
-    image: "/imgs/service_2.png",
-  },
-  {
-    id: 3,
-    title: "ตัดต่อและ Post-Production",
-    description: "ใส่เอฟเฟกต์, กราฟิก, ซับไตเติล, มิกซ์เสียง",
-    image: "/imgs/service_3.png",
-  },
-  {
-    id: 4,
-    title: "งานอีเวนท์และไลฟ์สด",
-    description: "บันทึกภาพ/วิดีโองานอีเวนท์, ถ่ายทอดสดออนไลน์",
-    image: "/imgs/service_4.png",
-  },
-  {
-    id: 5,
-    title: "PR & Communication",
-    description: "ผลิตคอนเทนต์เพื่อการประชาสัมพันธ์และสร้างภาพลักษณ์",
-    image: "/imgs/service_5.png",
-  },
-]);
-
-const dataPortfolio = ref([
-  {
-    id: 1,
-    title: "VTR Kalasin University 2026",
-    videoId: "k72XYUkt7gbJFWE1aio",
-    mediaPlatforms: "dailymotion",
-    thumbnail: "/imgs/thumbnail_1.png",
-  },
-  {
-    id: 2,
-    title: "สำนักงานขนส่งจังหวัดกาฬสินธุ์",
-    videoId: "nzDFZ0s6Res",
-    mediaPlatforms: "youtube",
-    thumbnail: "/imgs/thumbnail_2.png",
-  },
-  {
-    id: 3,
-    title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์",
-    videoId: "zsmlcknZxtk",
-    mediaPlatforms: "youtube",
-    thumbnail: "/imgs/thumbnail_3.png",
-  },
-  {
-    id: 4,
-    title: "Local Data Ownership",
-    videoId: "https://www.facebook.com/watch/?v=1247964613673214",
-    mediaPlatforms: "facebook",
-    thumbnail: "/imgs/thumbnail_4.png",
-  },
-  {
-    id: 5,
-    title: "กองบุญเพื่อการให้ จังหวัดกาฬสินธุ์",
-    videoId: "https://www.facebook.com/watch/?v=9728740620582595",
-    mediaPlatforms: "facebook",
-    thumbnail: "/imgs/thumbnail_5.png",
-  },
-  {
-    id: 6,
-    title: "HILUXREVO ชุมชนคนครีเอเตอร์ ",
-    videoId: "https://www.facebook.com/watch/?v=718350310229849",
-    mediaPlatforms: "facebook",
-    thumbnail: "/imgs/thumbnail_6.png",
-  },
-  {
-    id: 7,
-    title: "อกหักทุกครั้ง อกพังทุกปี",
-    videoId: "eSUwNeuZSaM",
-    mediaPlatforms: "youtube",
-    thumbnail: "/imgs/thumbnail_7.png",
-  },
-  {
-    id: 8,
-    title: "เปิดใจฮักกัน",
-    videoId: "jJHwf0-hQfE",
-    mediaPlatforms: "youtube",
-    thumbnail: "/imgs/thumbnail_8.png",
-  },
-  {
-    id: 9,
-    title: "รักแท้แพ้ผู้บ่าวเทสดี",
-    videoId: "JD9yd35BUu0",
-    mediaPlatforms: "youtube",
-    thumbnail: "/imgs/thumbnail_9.png",
-  },
-]);
-
-const showModal = ref(false);
-const selectedVideoId = ref("");
-const selectedVideoMediaPlatformse = ref("youtube");
-
-function openModal(id, type) {
-  selectedVideoId.value = id;
-  selectedVideoMediaPlatformse.value = type;
-  showModal.value = true;
-}
-
-function closeModal() {
-  showModal.value = false;
-  selectedVideoId.value = "";
-  selectedVideoMediaPlatformse.value = "youtube";
-}
-onMounted(() => {
-  // ถ้า document โหลดเสร็จแล้วก่อนหน้านี้
-  if (document.readyState === "complete") {
-    loading.value = false;
-  } else {
-    // ฟัง event ตอนโหลดเสร็จ
-    window.addEventListener("load", () => {
-      loading.value = false;
-    });
-  }
-});
+import PortfolioGallery from "~/components/PortfolioGallery.vue";
+import { serviceItems } from "~/data/services";
 
 useHead({
-  title: "ค้ำคุณโปรดักชั่น | รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า",
+  title: "ค้ำคูณโปรดักชั่น | รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า",
   meta: [
     {
       name: "description",
       content:
-        "ค้ำคุณโปรดักชั่น รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก และสื่อ VDO ออนไลน์  ติดต่อเราได้เลย!",
+        "ค้ำคูณโปรดักชั่น รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก และสื่อ VDO ออนไลน์  ติดต่อเราได้เลย!",
     },
     {
       name: "keywords",
       content:
         "รับผลิตสื่อโฆษณา, วิดีโอโปรโมท, รีวิวสินค้า, ผลิตวิดีโอ, สื่อการสอน, โมชั่นกราฟฟิก, Kumkoon Production",
     },
-    { property: "og:title", content: "ค้ำคุณโปรดักชั่น | รับผลิตสื่อโฆษณา" },
+    { property: "og:title", content: "ค้ำคูณโปรดักชั่น | รับผลิตสื่อโฆษณา" },
     {
       property: "og:description",
       content: "ทีมงานผู้เชี่ยวชาญด้านการผลิตสื่อวิดีโอและโฆษณาออนไลน์ ครบวงจร",
     },
     { property: "og:image", content: "/imgs/OG_image.png" },
     { property: "og:url", content: "https://kumkoonproduction.com" },
-    { property: "lang", content: "thai" },
-    { property: "icon", content: "/favicon.ico" },
   ],
 });
 
 defineOgImage({
   component: "OgImage",
   props: {
-    title: "ค้ำคุณโปรดักชั่น",
+    title: "ค้ำคูณโปรดักชั่น",
     description:
       "รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก ครบวงจร",
   },
 });
 </script>
 
-<style>
-@keyframes slide {
-
-  0%,
-  33% {
-    transform: translateX(0%);
-  }
-
-  38%,
-  66% {
-    transform: translateX(-100%);
-  }
-
-  71%,
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-.animate-slide {
-  width: 300%;
-  animation: slide 12s infinite;
-}
-</style>
