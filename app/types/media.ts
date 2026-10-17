@@ -6,6 +6,7 @@ export interface PortfolioItem {
   videoId: string;
   platform: MediaPlatform;
   thumbnail: string;
+  category:string;
 }
 
 export interface ServiceItem {

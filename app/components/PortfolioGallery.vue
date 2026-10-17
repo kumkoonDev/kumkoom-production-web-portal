@@ -11,9 +11,27 @@
         </p>
       </div>
 
+      <!-- Category Filter Tabs -->
+      <div class="mb-10 flex flex-wrap justify-center gap-2">
+        <button
+          v-for="cat in categories"
+          :key="cat"
+          type="button"
+          @click="selectedCategory = cat"
+          :class="[
+            'px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 border',
+            selectedCategory === cat
+              ? 'bg-primary text-white border-primary shadow-md'
+              : 'bg-white text-gray-600 border-gray-200 hover:border-primary hover:text-primary'
+          ]"
+        >
+          {{ cat === 'All' ? 'ทั้งหมด' : cat }}
+        </button>
+      </div>
+
       <div class="grid gap-6 md:grid-cols-3">
         <button
-          v-for="work in portfolioItems"
+          v-for="work in filteredPortfolioItems"
           :key="work.id"
           type="button"
           class="group relative flex h-64 w-full items-center justify-center overflow-hidden rounded-lg bg-cover bg-center shadow transition hover:scale-[1.02] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
@@ -40,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { portfolioItems } from "~/data/portfolio";
 import type { MediaPlatform, PortfolioItem } from "~/types/media";
 import VideoModal from "~/components/VideoModal.vue";
@@ -48,6 +66,21 @@ import VideoModal from "~/components/VideoModal.vue";
 const showModal = ref(false);
 const selectedVideoId = ref("");
 const selectedPlatform = ref<MediaPlatform>("youtube");
+const selectedCategory = ref("All");
+
+// Extract unique categories from portfolio items
+const categories = computed(() => {
+  const uniqueCats = Array.from(new Set(portfolioItems.map(item => item.category)));
+  return ['All', ...uniqueCats];
+});
+
+// Filter items based on selected category
+const filteredPortfolioItems = computed(() => {
+  if (selectedCategory.value === 'All') {
+    return portfolioItems;
+  }
+  return portfolioItems.filter(item => item.category === selectedCategory.value);
+});
 
 function openModal(work: PortfolioItem) {
   selectedVideoId.value = work.videoId;

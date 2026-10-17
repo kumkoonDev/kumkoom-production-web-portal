@@ -7,6 +7,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "k72XYUkt7gbJFWE1aio",
     platform: "dailymotion",
     thumbnail: "/imgs/thumbnail_1.png", 
+    category: "Corporate",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "nzDFZ0s6Res",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_2.png",
+    category: "Corporate",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "zsmlcknZxtk",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_3.png",
+    category: "Corporate",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "https://www.facebook.com/watch/?v=1247964613673214",
     platform: "facebook",
     thumbnail: "/imgs/thumbnail_4.png",
+    category: "Corporate",
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "https://www.facebook.com/watch/?v=9728740620582595",
     platform: "facebook",
     thumbnail: "/imgs/thumbnail_5.png",
+    category: "Corporate",
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "https://www.facebook.com/watch/?v=718350310229849",
     platform: "facebook",
     thumbnail: "/imgs/thumbnail_6.png",
+    category: "Corporate",
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "eSUwNeuZSaM",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_7.png",
+    category: "MV",
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "jJHwf0-hQfE",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_8.png",
+    category: "MV",
   },
   {
     id: 9,
@@ -63,5 +71,6 @@ export const portfolioItems: PortfolioItem[] = [
     videoId: "JD9yd35BUu0",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_9.png",
+    category: "MV",
   },
 ];

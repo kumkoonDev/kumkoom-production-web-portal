@@ -7,7 +7,7 @@
     aria-label="เครื่องเล่นวิดีโอ"
     @click.self="emitClose"
   >
-    <div class="relative w-full max-w-5xl">
+    <div class="relative w-full max-w-6xl">
       <button
         type="button"
         class="absolute -top-12 right-0 z-20 text-5xl font-bold text-white transition hover:text-red-400"
@@ -17,7 +17,7 @@
         &times;
       </button>
 
-      <div class="aspect-video overflow-hidden rounded-2xl bg-black shadow-lg">
+      <div class="aspect-video overflow-hidden rounded-2xl border-4 border-white/20 bg-black shadow-lg">
         <iframe
           v-if="platform === 'youtube'"
           class="h-full w-full"
