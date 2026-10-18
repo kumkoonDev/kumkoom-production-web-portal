@@ -23,15 +23,15 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "ค้ำคูณโปรดักชั่น",
-      // titleTemplate: '%s | คำคุณโปรดักชั่น',
+      title: "ค้ำคูณโปรดักชั่นเฮาส์",
+      // titleTemplate: '%s | คำคุณโปรดักชั่นเฮาส์',
       meta: [
         {
           name: "description",
           content:
             "รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า โมชั่นกราฟฟิก และสื่อการสอน ครบวงจร",
         },
-        { property: "og:title", content: "ค้ำคูณโปรดักชั่น" },
+        { property: "og:title", content: "ค้ำคูณโปรดักชั่นเฮาส์" },
         {
           property: "og:description",
           content:
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://www.kumkoonproduction.com/",
-    name: "ค้ำคูณโปรดักชั่น",
+    name: "ค้ำคูณโปรดักชั่นเฮาส์",
   },
 
   modules: [
