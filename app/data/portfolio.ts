@@ -2,7 +2,13 @@ import type { PortfolioItem } from "~/types/media";
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: 1,
+    title: "3 ปี ผลสำเร็จการขับเคลื่อนจังหวัดกาฬสินธุ์ สู่จังหวัดคุณธรรมต้นแบบ",
+    videoId: "17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M.png", 
+    category: "Corporate",
+  },
+  {
     title: "VTR Kalasin University 2026",
     videoId: "k72XYUkt7gbJFWE1aio",
     platform: "dailymotion",
@@ -10,7 +16,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 2,
     title: "สำนักงานขนส่งจังหวัดกาฬสินธุ์",
     videoId: "nzDFZ0s6Res",
     platform: "youtube",
@@ -18,7 +23,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 3,
     title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์",
     videoId: "zsmlcknZxtk",
     platform: "youtube",
@@ -26,7 +30,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 4,
     title: "Local Data Ownership",
     videoId: "https://www.facebook.com/watch/?v=1247964613673214",
     platform: "facebook",
@@ -34,7 +37,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 5,
     title: "กองบุญเพื่อการให้ จังหวัดกาฬสินธุ์",
     videoId: "https://www.facebook.com/watch/?v=9728740620582595",
     platform: "facebook",
@@ -42,7 +44,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 6,
     title: "HILUXREVO ชุมชนคนครีเอเตอร์",
     videoId: "https://www.facebook.com/watch/?v=718350310229849",
     platform: "facebook",
@@ -50,7 +51,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Corporate",
   },
   {
-    id: 7,
     title: "สิฮักอ้ายบ่ - แม็กซ์ นุวัฒน์ชัย ดาวเด่น ",
     videoId: "9JZNdM72eJ8",
     platform: "youtube",
@@ -58,7 +58,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "MV",
   },
   {
-    id: 7,
     title: "อกหักทุกครั้ง อกพังทุกปี",
     videoId: "eSUwNeuZSaM",
     platform: "youtube",
@@ -66,7 +65,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "MV",
   },
   {
-    id: 8,
     title: "เปิดใจฮักกัน",
     videoId: "jJHwf0-hQfE",
     platform: "youtube",
@@ -74,11 +72,24 @@ export const portfolioItems: PortfolioItem[] = [
     category: "MV",
   },
   {
-    id: 9,
     title: "รักแท้แพ้ผู้บ่าวเทสดี",
     videoId: "JD9yd35BUu0",
     platform: "youtube",
     thumbnail: "/imgs/thumbnail_9.png",
     category: "MV",
+  },
+  {
+    title: "งานประชุมปฐมนิเทศ",
+    videoId: "1IasBzWJhwhJ2TeRHU0geqhu3RWASb1t1",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1IasBzWJhwhJ2TeRHU0geqhu3RWASb1t1.png",
+    category: "Live",
+  },
+  {
+    title: "โครงการอนุรักษ์ฟื้นฟูและพัฒนาแหล่งน้ำลุ่มน้ำโมงตอนล่างจังหวัดหนองคาย",
+    videoId: "1wLZmEW9ikqeX8FsU7Q-SlqdTwLSE47nL",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1wLZmEW9ikqeX8FsU7Q.png",
+    category: "Live",
   },
 ];

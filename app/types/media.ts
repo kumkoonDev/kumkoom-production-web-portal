@@ -1,13 +1,13 @@
-export type MediaPlatform = "youtube" | "facebook" | "dailymotion";
+export type MediaPlatform = "youtube" | "facebook" | "dailymotion" | "googledrive" | "direct_video";
 
 export interface PortfolioItem {
-  id: number;
   title: string;
   videoId: string;
   platform: MediaPlatform;
   thumbnail: string;
   category:string;
 }
+
 
 export interface ServiceItem {
   id: number;

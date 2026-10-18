@@ -45,6 +45,28 @@
           allowfullscreen
         />
 
+        <video
+          v-else-if="platform === 'direct_video'"
+          class="h-full w-full"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+        >
+          <source :src="videoId" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <iframe
+          v-else-if="platform === 'googledrive'"
+          class="h-full w-full"
+          :src="`https://drive.google.com/file/d/${videoId}/preview`"
+          title="Google Drive video player"
+          allow="autoplay"
+          allowfullscreen
+        />
+
         <div v-else class="flex h-full items-center justify-center text-white">
           ไม่มีวิดีโอให้แสดง
         </div>

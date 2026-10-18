@@ -32,7 +32,7 @@
       <div class="grid gap-6 md:grid-cols-3">
         <button
           v-for="work in filteredPortfolioItems"
-          :key="work.id"
+          :key="work.title"
           type="button"
           class="group relative flex h-64 w-full items-center justify-center overflow-hidden rounded-lg bg-cover bg-center shadow transition hover:scale-[1.02] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           :style="{ backgroundImage: `url('${work.thumbnail}')` }"
