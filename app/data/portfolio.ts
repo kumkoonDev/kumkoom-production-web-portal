@@ -174,4 +174,25 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/imgs/thumbnail_1wLZmEW9ikqeX8FsU7Q.png",
     category: "Live & OB",
   },
+  {
+    title: "N & R Wedding",
+    videoId: "1giP3_t0nKu4Cy2ei9h9ZcN2l4KyxUquD",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1giP3_t0nKu4Cy2ei9h9ZcN2l4KyxUquD.png",
+    category: "Wedding", 
+  },
+{
+    title: "คุณกิ๊ก & คุณปาล์ม",
+    videoId: "1XxIG-QN81_lojXozhYbgBUU-Kf_koNF6",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1XxIG-QN81_lojXozhYbgBUU-Kf_koNF6.png",
+    category: "Wedding", 
+  },
+{
+    title: "Pre-wedding MAY & PUN",
+    videoId: "1gnc2DX2K7kq70D1aS7Kn2Z1QjOiFzlsL",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1gnc2DX2K7kq70D1aS7Kn2Z1QjOiFzlsL.png",
+    category: "Wedding", 
+  },
 ];
