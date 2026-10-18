@@ -2,10 +2,48 @@ import type { PortfolioItem } from "~/types/media";
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: "๑๑ ปี แห่งความภาคภูมิใจ มหาวิทยาลัยกาฬสินธุ์",
+    videoId: "1p5qS_yNyHtGV3-t1l9zZf8SIhXOXb_Lk",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1p5qS_yNyHtGV3-t1l9zZf8SIhXOXb_Lk.png", 
+    category: "Corporate",
+  },
+  {
     title: "3 ปี ผลสำเร็จการขับเคลื่อนจังหวัดกาฬสินธุ์ สู่จังหวัดคุณธรรมต้นแบบ",
     videoId: "17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M.png", 
+    category: "Corporate",
+  },
+  {
+    title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์ 2025",
+    videoId: "1YuddH3_wIZDevTdr4-8x53PiJZnqP2NC",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1YuddH3_wIZDevTdr4-8x53PiJZnqP2NC.png", 
+    category: "Corporate",
+  },
+  {
+    title: "UBI KSU",
+    videoId: "1boXNR5Q8mtXoHUtfVd17ge13nL0fzC5C",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1boXNR5Q8mtXoHUtfVd17ge13nL0fzC5C.png", 
+    category: "Corporate",
+  },
+
+
+   {
+    title: "โครงการค่าใช้จ่ายในการศึกษาความเหมาะสม สำรวจ ออกแบบพื้นที่ชุ่มน้ำหนองหานกุมภวาปี จังหวัดอุดรธานี",
+    videoId: "1IsZ8bhaiMGD2HYVJl24fC86USOmZqTt9",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1IsZ8bhaiMGD2HYVJl24fC86USOmZqTt9.png", 
+    category: "Corporate",
+  },
+
+  {
+    title: "คุกกี้ข้าวเหนียวเขาวง",
+    videoId: "1pc22C2Fk1RonZlwznsXDdFErwyCDVQo0",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1pc22C2Fk1RonZlwznsXDdFErwyCDVQo0.png", 
     category: "Corporate",
   },
   {
