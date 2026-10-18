@@ -5,37 +5,37 @@ export const portfolioItems: PortfolioItem[] = [
     title: "๑๑ ปี แห่งความภาคภูมิใจ มหาวิทยาลัยกาฬสินธุ์",
     videoId: "1p5qS_yNyHtGV3-t1l9zZf8SIhXOXb_Lk",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_1p5qS_yNyHtGV3-t1l9zZf8SIhXOXb_Lk.png", 
+    thumbnail: "/imgs/thumbnail_1p5qS_yNyHtGV3-t1l9zZf8SIhXOXb_Lk.png",
     category: "Corporate & Commercial",
   },
   {
     title: "3 ปี ผลสำเร็จการขับเคลื่อนจังหวัดกาฬสินธุ์ สู่จังหวัดคุณธรรมต้นแบบ",
     videoId: "17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M.png", 
+    thumbnail: "/imgs/thumbnail_17b1tl2VO0pdr9AdciZ8_WnzRMiEQ5H1M.png",
     category: "Corporate & Commercial",
   },
   {
     title: "โรงเรียนกาญจนาภิเษกวิทยาลัย กาฬสินธุ์ 2025",
     videoId: "1YuddH3_wIZDevTdr4-8x53PiJZnqP2NC",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_1YuddH3_wIZDevTdr4-8x53PiJZnqP2NC.png", 
+    thumbnail: "/imgs/thumbnail_1YuddH3_wIZDevTdr4-8x53PiJZnqP2NC.png",
     category: "Corporate & Commercial",
   },
   {
     title: "UBI KSU",
     videoId: "1boXNR5Q8mtXoHUtfVd17ge13nL0fzC5C",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_1boXNR5Q8mtXoHUtfVd17ge13nL0fzC5C.png", 
+    thumbnail: "/imgs/thumbnail_1boXNR5Q8mtXoHUtfVd17ge13nL0fzC5C.png",
     category: "Corporate & Commercial",
   },
 
-
-   {
-    title: "โครงการค่าใช้จ่ายในการศึกษาความเหมาะสม สำรวจ ออกแบบพื้นที่ชุ่มน้ำหนองหานกุมภวาปี จังหวัดอุดรธานี",
+  {
+    title:
+      "โครงการค่าใช้จ่ายในการศึกษาความเหมาะสม สำรวจ ออกแบบพื้นที่ชุ่มน้ำหนองหานกุมภวาปี จังหวัดอุดรธานี",
     videoId: "1IsZ8bhaiMGD2HYVJl24fC86USOmZqTt9",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_1IsZ8bhaiMGD2HYVJl24fC86USOmZqTt9.png", 
+    thumbnail: "/imgs/thumbnail_1IsZ8bhaiMGD2HYVJl24fC86USOmZqTt9.png",
     category: "Corporate & Commercial",
   },
 
@@ -43,14 +43,14 @@ export const portfolioItems: PortfolioItem[] = [
     title: "คุกกี้ข้าวเหนียวเขาวง",
     videoId: "1pc22C2Fk1RonZlwznsXDdFErwyCDVQo0",
     platform: "googledrive",
-    thumbnail: "/imgs/thumbnail_1pc22C2Fk1RonZlwznsXDdFErwyCDVQo0.png", 
+    thumbnail: "/imgs/thumbnail_1pc22C2Fk1RonZlwznsXDdFErwyCDVQo0.png",
     category: "Corporate & Commercial",
   },
   {
     title: "VTR Kalasin University 2026",
     videoId: "k72XYUkt7gbJFWE1aio",
     platform: "dailymotion",
-    thumbnail: "/imgs/thumbnail_1.png", 
+    thumbnail: "/imgs/thumbnail_1.png",
     category: "Corporate & Commercial",
   },
   {
@@ -110,70 +110,68 @@ export const portfolioItems: PortfolioItem[] = [
     category: "MV",
   },
   {
-    title: "รักแท้แพ้ผู้บ่าวเทสดี",
-    videoId: "JD9yd35BUu0",
-    platform: "youtube",
-    thumbnail: "/imgs/thumbnail_9.png",
-    category: "MV",
-  },
-
-  {
     title: "Coding โรงเรียนกาญจนาภิเษกวิทยาลัย",
     videoId: "1oIMUqKF3x17vTGBcayKhYXm9hBqyc0qx",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1oIMUqKF3x17vTGBcayKhYXm9hBqyc0qx.png",
     category: "Films & Creative",
-},
-{
+  },
+  {
     title: "Ponglang Festive",
     videoId: "13Ge6ZkzUsg-aBlx4KwqQ7wZP8eE69EE-",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_13Ge6ZkzUsg-aBlx4KwqQ7wZP8eE69EE.png",
     category: "Films & Creative",
-},
-{
+  },
+  {
     title: "Code of the Heart  บทเรียนหัวใจ",
     videoId: "1YtaFxz8MEvFBbHTXUJA6tBR_U80ECF6V",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1YtaFxz8MEvFBbHTXUJA6tBR_U80ECF6V.png",
     category: "Films & Creative",
-},
-{
+  },
+  {
     title: "The Final Day",
     videoId: "1mv7tLiF32-NS9Puz1lmlDRITWH_RNuQK",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1mv7tLiF32-NS9Puz1lmlDRITWH_RNuQK.png",
     category: "Films & Creative",
-},
-{
+  },
+  {
     title: "บุญของแม่",
     videoId: "1gj0fzoiAdH3BkyAg6c4gnW9Wgn9YoQDV",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1gj0fzoiAdH3BkyAg6c4gnW9Wgn9YoQDV.png",
     category: "Films & Creative",
-},
-{
+  },
+  {
     title: "พิธีบวงสรวง อาหารเสริม ณ วัดป่าดอนตาล",
     videoId: "1upDEZKkJFUDyF_gGc4oPrri8kVwjl95F",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1upDEZKkJFUDyF_gGc4oPrri8kVwjl95F.png",
     category: "Films & Creative",
-},
-
-
+  },
 
   {
     title: "งานประชุมปฐมนิเทศ",
     videoId: "1IasBzWJhwhJ2TeRHU0geqhu3RWASb1t1",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1IasBzWJhwhJ2TeRHU0geqhu3RWASb1t1.png",
-    category: "Live",
+    category: "Live & OB",
   },
   {
-    title: "โครงการอนุรักษ์ฟื้นฟูและพัฒนาแหล่งน้ำลุ่มน้ำโมงตอนล่างจังหวัดหนองคาย",
+    title: "โครงการค่าใช้จ่ายในการศึกษาความเหมาะสม สำรวจ ออกแบบ และผลกระทบสิ่งแวดล้อม โครงการอนุรักษ์ฟื้นฟูและพัฒนาแหล่งน้ำ",
+    videoId: "1R4h3-j_j8-SEQIcy81TBdS1tt_GE56np",
+    platform: "googledrive",
+    thumbnail: "/imgs/thumbnail_1R4h3-j_j8-SEQIcy81TBdS1tt_GE56np.png",
+    category: "Live & OB", 
+  },
+  {
+    title:
+      "โครงการอนุรักษ์ฟื้นฟูและพัฒนาแหล่งน้ำลุ่มน้ำโมงตอนล่างจังหวัดหนองคาย",
     videoId: "1wLZmEW9ikqeX8FsU7Q-SlqdTwLSE47nL",
     platform: "googledrive",
     thumbnail: "/imgs/thumbnail_1wLZmEW9ikqeX8FsU7Q.png",
-    category: "Live",
+    category: "Live & OB",
   },
 ];
