@@ -51,6 +51,14 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 7,
+    title: "สิฮักอ้ายบ่ - แม็กซ์ นุวัฒน์ชัย ดาวเด่น ",
+    videoId: "9JZNdM72eJ8",
+    platform: "youtube",
+    thumbnail: "/imgs/thumbnail_9JZNdM72eJ8.png",
+    category: "MV",
+  },
+  {
+    id: 7,
     title: "อกหักทุกครั้ง อกพังทุกปี",
     videoId: "eSUwNeuZSaM",
     platform: "youtube",

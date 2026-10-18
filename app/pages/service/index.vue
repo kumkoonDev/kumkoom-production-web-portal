@@ -36,7 +36,7 @@
 import { serviceItems } from "~/data/services";
 
 useHead({
-  title: "บริการของเรา | ค้ำคูณโปรดักชั่น",
+  title: "บริการของเรา | ค้ำคูณโปรดักชั่นเฮาส์",
   meta: [
     {
       name: "description",

@@ -19,7 +19,7 @@
     <div data-aos="fade-up" class="relative z-10 flex items-center justify-start h-full px-8 md:ml-40 md:px-16">
       <div class="text-white max-w-xl">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">ยินดีต้อนรับ สู่</h1>
-        <p class="text-4xl md:text-6xl font-bold mb-4">ค้ำคูณ โปรดักชั่น</p>
+        <p class="text-4xl md:text-6xl font-bold mb-4">ค้ำคูณ โปรดักชั่น เฮาส์</p>
         <p class="text-lg md:text-xl mb-6">
           เติมเต็มทุกไอเดีย สร้างสรรค์ทุกสื่ออย่างมืออาชีพ
         </p>
@@ -58,10 +58,10 @@
             เกี่ยวกับเรา
           </h3>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-black">
-            ค้ำคูณ โปรดักชั่น
+            ค้ำคูณ โปรดักชั่น เฮาส์
           </h2>
           <p class="text-gray-700 leading-relaxed text-lg">
-            ค้ำคูณ โปรดักชั่น
+            ค้ำคูณ โปรดักชั่น เฮาส์
             เกิดจากกลุ่มวัยรุ่นที่มีใจรักในการสร้างงานศิลป์และสื่อสร้างสรรค์
             เรามุ่งมั่นในการผลิตสื่อที่ตอบโจทย์ทั้งธุรกิจ องค์กร และบุคคล
             ด้วยกระบวนการทำงานครบวงจร ตั้งแต่การคิดไอเดีย เขียนบท ถ่ายทำ ตัดต่อ
@@ -219,19 +219,19 @@ import PortfolioGallery from "~/components/PortfolioGallery.vue";
 import { serviceItems } from "~/data/services";
 
 useHead({
-  title: "ค้ำคูณโปรดักชั่น | รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า",
+  title: "ค้ำคูณโปรดักชั่นเฮาส์ | รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า",
   meta: [
     {
       name: "description",
       content:
-        "ค้ำคูณโปรดักชั่น รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก และสื่อ VDO ออนไลน์  ติดต่อเราได้เลย!",
+        "ค้ำคูณโปรดักชั่นเฮาส์ รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก และสื่อ VDO ออนไลน์  ติดต่อเราได้เลย!",
     },
     {
       name: "keywords",
       content:
         "รับผลิตสื่อโฆษณา, วิดีโอโปรโมท, รีวิวสินค้า, ผลิตวิดีโอ, สื่อการสอน, โมชั่นกราฟฟิก, Kumkoon Production",
     },
-    { property: "og:title", content: "ค้ำคูณโปรดักชั่น | รับผลิตสื่อโฆษณา" },
+    { property: "og:title", content: "ค้ำคูณโปรดักชั่นเฮาส์ | รับผลิตสื่อโฆษณา" },
     {
       property: "og:description",
       content: "ทีมงานผู้เชี่ยวชาญด้านการผลิตสื่อวิดีโอและโฆษณาออนไลน์ ครบวงจร",
@@ -244,7 +244,7 @@ useHead({
 defineOgImage({
   component: "OgImage",
   props: {
-    title: "ค้ำคูณโปรดักชั่น",
+    title: "ค้ำคูณโปรดักชั่นเฮาส์",
     description:
       "รับผลิตสื่อโฆษณา วิดีโอ รีวิวสินค้า สื่อการสอน โมชั่นกราฟฟิก ครบวงจร",
   },

@@ -1,6 +1,6 @@
-# ค้ำคูณโปรดักชั่น — Production Web Portal
+# ค้ำคูณโปรดักชั่นเฮาส์ — Production Web Portal
 
-เว็บไซต์ประชาสัมพันธ์และแสดงผลงานของค้ำคูณโปรดักชั่น พัฒนาด้วย Nuxt 4, Vue 3, TypeScript และ Tailwind CSS
+เว็บไซต์ประชาสัมพันธ์และแสดงผลงานของค้ำคูณโปรดักชั่นเฮาส์ พัฒนาด้วย Nuxt 4, Vue 3, TypeScript และ Tailwind CSS
 
 ## ความต้องการ
 
