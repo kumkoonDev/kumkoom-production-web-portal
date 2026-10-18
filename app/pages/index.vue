@@ -265,14 +265,14 @@
 
   <!-- CONTACT Section -->
   <div class="py-16 bg-gray-50">
-    <div data-aos="fade-up" class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">ติดต่อเรา</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="space-y-6 text-left flex justify-start md:justify-center">
-          <div class="space-y-4 w-2/3 flex flex-col justify-center m-4">
+        <div class="flex justify-start md:justify-center">
+          <div class="space-y-6 w-full max-w-md">
             <div class="flex justify-start items-center space-x-4">
               <div class="bg-primary p-3 rounded-lg text-white">📍</div>
               <div>
